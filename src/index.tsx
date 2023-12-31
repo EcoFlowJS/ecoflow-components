@@ -1,3 +1,2 @@
-export default function index() {
-  return <div>index</div>;
-}
+import "tailwindcss/tailwind.css";
+export * from "./layout";
