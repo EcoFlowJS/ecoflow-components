@@ -1,13 +1,14 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import "./LoadingSquareCircle.style.less";
 import styled from "styled-components";
 
 interface LoadingSquareCircleProps {
+  style?: CSSProperties;
   loaderColor?: string;
 }
 
 export default function (
-  { loaderColor }: LoadingSquareCircleProps = { loaderColor: "#fff" }
+  { loaderColor, style }: LoadingSquareCircleProps = { loaderColor: "#fff" }
 ) {
   const LoadingSquareCircle = styled.div`
     &:after,
@@ -15,5 +16,5 @@ export default function (
       box-shadow: 0 0 0 3px inset ${loaderColor};
     }
   `;
-  return <LoadingSquareCircle className="loadingsquarecircle" />;
+  return <LoadingSquareCircle className="loadingsquarecircle" style={style} />;
 }
