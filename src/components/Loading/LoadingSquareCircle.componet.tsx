@@ -3,12 +3,12 @@ import "./LoadingSquareCircle.style.less";
 import styled from "styled-components";
 
 interface LoadingSquareCircleProps {
-  style?: CSSProperties;
+  scale?: CSSProperties["scale"];
   loaderColor?: string;
 }
 
 export default function (
-  { loaderColor, style }: LoadingSquareCircleProps = { loaderColor: "#fff" }
+  { loaderColor, scale }: LoadingSquareCircleProps = { loaderColor: "#fff" }
 ) {
   const LoadingSquareCircle = styled.div`
     &:after,
@@ -16,5 +16,10 @@ export default function (
       box-shadow: 0 0 0 3px inset ${loaderColor};
     }
   `;
-  return <LoadingSquareCircle className="loadingsquarecircle" style={style} />;
+  return (
+    <LoadingSquareCircle
+      className="loadingsquarecircle"
+      style={{ scale: scale }}
+    />
+  );
 }

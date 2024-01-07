@@ -3,15 +3,20 @@ import "./LoadingDotInfinity.style.less";
 import styled from "styled-components";
 
 interface LoadingDotInfinityProps {
-  style?: CSSProperties;
+  scale?: CSSProperties["scale"];
   loaderColor?: string;
 }
 
 export default function (
-  { loaderColor, style }: LoadingDotInfinityProps = { loaderColor: "#fff" }
+  { loaderColor, scale }: LoadingDotInfinityProps = { loaderColor: "#fff" }
 ) {
   const LoadingDotInfinity = styled.div`
     --c: ${loaderColor} 92%, transparent;
   `;
-  return <LoadingDotInfinity className="loadingdotinfinity" style={style} />;
+  return (
+    <LoadingDotInfinity
+      className="loadingdotinfinity"
+      style={{ scale: scale }}
+    />
+  );
 }
