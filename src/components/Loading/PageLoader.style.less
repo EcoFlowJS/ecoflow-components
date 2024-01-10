@@ -1,0 +1,120 @@
+.item {
+  position: absolute;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  -webkit-animation: ani-1 2s var(--ani-delay) linear infinite;
+  animation: ani-1 2s var(--ani-delay) linear infinite;
+}
+.item:nth-of-type(1) {
+  --ani-delay: -2s;
+}
+.item:nth-of-type(2) {
+  --ani-delay: -1.33333s;
+}
+.item:nth-of-type(3) {
+  --ani-delay: -0.66667s;
+}
+@-webkit-keyframes ani-1 {
+  0%,
+  100% {
+    transform: translateZ(100px);
+  }
+  10% {
+    transform: translateZ(0px);
+  }
+  20% {
+    transform: translateZ(-100px);
+  }
+}
+@keyframes ani-1 {
+  0%,
+  100% {
+    transform: translateZ(100px);
+  }
+  10% {
+    transform: translateZ(0px);
+  }
+  20% {
+    transform: translateZ(-100px);
+  }
+}
+.item__s {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 40px;
+  height: 100%;
+  color: var(--rs-text-secondary);
+  background-color: var(--rs-text-secondary);
+  transform-origin: 100% 50%;
+  transform-style: preserve-3d;
+  -webkit-animation: inherit;
+  animation: inherit;
+  -webkit-animation-name: ani-s;
+  animation-name: ani-s;
+}
+@-webkit-keyframes ani-s {
+  0%,
+  100%,
+  5% {
+    transform: rotate(var(--rotate, 0deg)) translateX(20px) scaleY(0.2);
+  }
+  20% {
+    transform: rotate(var(--rotate, 0deg)) translateX(50px) scaleY(0.5);
+  }
+  30% {
+    transform: rotate(var(--rotate, 0deg)) translateX(100px) scaleY(1);
+  }
+  60% {
+    transform: rotate(var(--rotate, 0deg)) translateX(80px) scaleY(0.8);
+  }
+}
+@keyframes ani-s {
+  0%,
+  100%,
+  5% {
+    transform: rotate(var(--rotate, 0deg)) translateX(20px) scaleY(0.2);
+  }
+  20% {
+    transform: rotate(var(--rotate, 0deg)) translateX(50px) scaleY(0.5);
+  }
+  30% {
+    transform: rotate(var(--rotate, 0deg)) translateX(100px) scaleY(1);
+  }
+  60% {
+    transform: rotate(var(--rotate, 0deg)) translateX(80px) scaleY(0.8);
+  }
+}
+.item__s::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(100% * var(--d, 1));
+  bottom: 0;
+  width: 100%;
+  background-color: var(--rs-text-tertiary);
+  transform-origin: 0% 50%;
+  transform: rotateY(90deg);
+}
+.item__s:nth-of-type(2) {
+  --color-dl: var(--rs-text-secondary);
+  --rotate: 90deg;
+}
+.item__s:nth-of-type(3) {
+  --d: 0;
+  --rotate: 180deg;
+}
+.item__s:nth-of-type(4) {
+  --color-dl: var(--rs-text-secondary);
+  --d: 0;
+  --rotate: 270deg;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateZ(45deg);
+}

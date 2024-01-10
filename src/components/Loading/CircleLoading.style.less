@@ -1,0 +1,45 @@
+@keyframes spin {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(720deg) scale(0.5);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    letter-spacing: 5px;
+    left: calc(50% + (10px / 2));
+  }
+  50% {
+    letter-spacing: 2.5px;
+    left: 50%;
+  }
+}
+
+.spinner-text {
+  position: absolute;
+  top: calc(50% - (10px / 2));
+  left: 50%;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font: bold 10px sans-serif;
+  transform: translate3d(-50%, -50%);
+  animation: pulse 1.5s infinite;
+}
+
+.spinner {
+  margin: 0;
+  display: block;
+  position: absolute;
+  left: calc(50% - (24px * 2.5));
+  top: calc(50% - 24px);
+  width: 1px;
+  height: 1px;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-radius: 50px !important;
+  animation: spin 1.5s infinite;
+}
