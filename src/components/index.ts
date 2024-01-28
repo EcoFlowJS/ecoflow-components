@@ -4,6 +4,7 @@ import LoadingSquareCircle from "./Loading/LoadingSquareCircle.componet";
 import LoadingDotInfinity from "./Loading/LoadingDotInfinity.component";
 import PageLoader from "./Loading/PageLoader.component";
 import CircleLoading from "./Loading/CircleLoading.component";
+import AlertModal from "./Modals/AlertModal/AlertModal";
 
 export {
   Button,
@@ -12,4 +13,5 @@ export {
   LoadingDotInfinity,
   PageLoader,
   CircleLoading,
+  AlertModal,
 };
