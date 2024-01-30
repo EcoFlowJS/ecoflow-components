@@ -5,6 +5,11 @@ import LoadingDotInfinity from "./Loading/LoadingDotInfinity.component";
 import PageLoader from "./Loading/PageLoader.component";
 import CircleLoading from "./Loading/CircleLoading.component";
 import AlertModal from "./Modals/AlertModal/AlertModal";
+import FormGroup from "./Form/FromGroup/FromGroup";
+import InputEnv from "./Form/InputEnv/InputEnv";
+import InputPassword from "./Form/InputPassword/InputPassword";
+import InputPasswordEnv from "./Form/InputPasswordEnv/InputPasswordEnv";
+import { Form } from "rsuite";
 
 export {
   Button,
@@ -14,4 +19,9 @@ export {
   PageLoader,
   CircleLoading,
   AlertModal,
+  Form,
+  FormGroup,
+  InputEnv,
+  InputPassword,
+  InputPasswordEnv,
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, ButtonProps, FlexboxGrid, Modal, ModalProps } from "rsuite";
-import { RsRefForwardingComponent } from "rsuite/esm/@types/common";
 import "./AlertModal.style.less";
 
 interface AlertModalProps extends ModalProps {
@@ -17,18 +16,13 @@ export default function AlertModal({
   CancelButtonProps,
   confirmButtonText = "Confirm",
   CancelButtonText = "Cancel",
+  backdrop = "static",
+  role = "alertdialog",
+  size = "xs",
   ...props
 }: AlertModalProps) {
-  props.backdrop = "static";
-  props.role = "alertdialog";
-  props.size = "xs";
   return (
-    <Modal
-      backdrop={props.backdrop}
-      role={props.role}
-      {...props}
-      size={props.size}
-    >
+    <Modal backdrop={backdrop} role={role} {...props} size={size}>
       <Modal.Body>{children}</Modal.Body>
       <Modal.Footer>
         <FlexboxGrid justify="space-between">
