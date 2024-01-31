@@ -6,6 +6,7 @@ import EyeSlashIcon from "@rsuite/icons/legacy/EyeSlash";
 export default function InputPasswordEnv({
   envCheckbox,
   envCheckboxOnChange,
+  defaultChecked = false,
   ...props
 }: {
   [key: string]: any;
@@ -41,6 +42,7 @@ export default function InputPasswordEnv({
             setEnv(checked);
             envCheckboxOnChange(checked);
           }}
+          defaultChecked={defaultChecked}
         >
           ENV
         </Checkbox>

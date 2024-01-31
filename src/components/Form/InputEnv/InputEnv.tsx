@@ -4,6 +4,7 @@ import { Checkbox, Input, InputGroup, Stack } from "rsuite";
 export default function InputEnv({
   envCheckbox,
   envCheckboxOnChange,
+  defaultChecked = false,
   size,
   ...props
 }: {
@@ -19,6 +20,7 @@ export default function InputEnv({
           onChange={(_val, checked, _event) => {
             envCheckboxOnChange(checked);
           }}
+          defaultChecked={defaultChecked}
         >
           ENV
         </Checkbox>

@@ -3,7 +3,7 @@ import { Button, ButtonProps, FlexboxGrid, Modal, ModalProps } from "rsuite";
 import "./AlertModal.style.less";
 
 interface AlertModalProps extends ModalProps {
-  children?: JSX.Element[];
+  children?: JSX.Element[] | JSX.Element | any;
   confirmButtonProps?: ButtonProps;
   confirmButtonText?: string | JSX.Element;
   CancelButtonProps?: ButtonProps;
