@@ -4,6 +4,7 @@ import { Form } from "rsuite";
 interface FormGroupProps {
   name: string;
   label: string;
+  helperText?: string | JSX.Element;
   accepter?: React.ElementType<any, keyof React.JSX.IntrinsicElements>;
   envCheckbox?: boolean;
   envCheckboxOnChange?: (val: boolean) => void;
@@ -13,6 +14,7 @@ interface FormGroupProps {
 export default function FormGroup({
   name,
   label,
+  helperText,
   accepter,
   ...rest
 }: FormGroupProps) {
@@ -20,6 +22,7 @@ export default function FormGroup({
     <Form.Group controlId={name}>
       <Form.ControlLabel>{label}</Form.ControlLabel>
       <Form.Control name={name} accepter={accepter} {...rest} />
+      {helperText ? <Form.HelpText>{helperText}</Form.HelpText> : <></>}
     </Form.Group>
   );
 }
