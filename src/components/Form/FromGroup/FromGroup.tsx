@@ -20,9 +20,13 @@ export default function FormGroup({
 }: FormGroupProps) {
   return (
     <Form.Group controlId={name}>
-      <Form.ControlLabel>{label}</Form.ControlLabel>
+      <Form.ControlLabel style={{ width: 220 }}>{label}</Form.ControlLabel>
       <Form.Control name={name} accepter={accepter} {...rest} />
-      {helperText ? <Form.HelpText>{helperText}</Form.HelpText> : <></>}
+      {helperText ? (
+        <Form.HelpText style={{ marginLeft: 242 }}>{helperText}</Form.HelpText>
+      ) : (
+        <></>
+      )}
     </Form.Group>
   );
 }
