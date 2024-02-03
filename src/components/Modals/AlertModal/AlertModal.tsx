@@ -30,7 +30,7 @@ export default function AlertModal({
             <Button
               {...confirmButtonProps}
               appearance={
-                confirmButtonProps!.appearance
+                confirmButtonProps?.appearance
                   ? confirmButtonProps!.appearance
                   : "primary"
               }
@@ -43,7 +43,7 @@ export default function AlertModal({
             <Button
               {...CancelButtonProps}
               appearance={
-                CancelButtonProps!.appearance
+                CancelButtonProps?.appearance
                   ? CancelButtonProps!.appearance
                   : "primary"
               }
