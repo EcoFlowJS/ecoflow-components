@@ -11,6 +11,7 @@ import InputPassword from "./Form/InputPassword/InputPassword";
 import InputPasswordEnv from "./Form/InputPasswordEnv/InputPasswordEnv";
 import { Form } from "rsuite";
 import IconWrapper from "./IconWrapper/IconWrapper";
+import Uploader from "./Form/Uploader/Uploader";
 
 export {
   Button,
@@ -26,4 +27,5 @@ export {
   InputPassword,
   InputPasswordEnv,
   IconWrapper,
+  Uploader,
 };

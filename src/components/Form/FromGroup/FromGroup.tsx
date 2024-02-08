@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { Form } from "rsuite";
 
 interface FormGroupProps {
@@ -7,6 +7,7 @@ interface FormGroupProps {
   helperText?: string | JSX.Element;
   accepter?: React.ElementType<any, keyof React.JSX.IntrinsicElements>;
   envCheckbox?: boolean;
+  helperTextStyle?: CSSProperties;
   envCheckboxOnChange?: (val: boolean) => void;
   [key: string]: any;
 }
@@ -16,6 +17,7 @@ export default function FormGroup({
   label,
   helperText,
   accepter,
+  helperTextStyle = {},
   ...rest
 }: FormGroupProps) {
   return (
@@ -23,7 +25,7 @@ export default function FormGroup({
       <Form.ControlLabel style={{ width: 220 }}>{label}</Form.ControlLabel>
       <Form.Control name={name} accepter={accepter} {...rest} />
       {helperText ? (
-        <Form.HelpText style={{ marginLeft: 242 }}>{helperText}</Form.HelpText>
+        <Form.HelpText style={helperTextStyle}>{helperText}</Form.HelpText>
       ) : (
         <></>
       )}
