@@ -3,14 +3,14 @@ import { Button, ButtonProps, FlexboxGrid, Modal, ModalProps } from "rsuite";
 import "./AlertModal.style.less";
 
 interface AlertModalProps extends ModalProps {
-  children?: JSX.Element[] | JSX.Element | any;
+  children?: React.ReactNode;
   confirmButtonProps?: ButtonProps;
   confirmButtonText?: string | JSX.Element;
   CancelButtonProps?: ButtonProps;
   CancelButtonText?: string | JSX.Element;
 }
 
-export default function AlertModal({
+function AlertModal({
   children,
   confirmButtonProps,
   CancelButtonProps,
@@ -23,7 +23,7 @@ export default function AlertModal({
 }: AlertModalProps) {
   return (
     <Modal backdrop={backdrop} role={role} {...props} size={size}>
-      <Modal.Body>{children}</Modal.Body>
+      {children}
       <Modal.Footer>
         <FlexboxGrid justify="space-between">
           <FlexboxGrid.Item>
@@ -57,3 +57,9 @@ export default function AlertModal({
     </Modal>
   );
 }
+
+AlertModal.Body = Modal.Body;
+AlertModal.Header = Modal.Header;
+AlertModal.Title = Modal.Title;
+
+export default AlertModal;

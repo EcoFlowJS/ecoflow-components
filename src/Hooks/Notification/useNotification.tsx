@@ -10,16 +10,11 @@ import {
   NotificationProps as RsuiteNotificationProps,
   useToaster,
 } from "rsuite";
+import { PlacementType } from "rsuite/esm/toaster/ToastContainer";
 
 interface NotificationProps extends RsuiteNotificationProps {
   children?: JSX.Element;
-  placement?:
-    | "topStart"
-    | "topCenter"
-    | "topEnd"
-    | "bottomStart"
-    | "bottomCenter"
-    | "bottomEnd";
+  placement?: PlacementType;
   divider?: boolean;
 }
 
