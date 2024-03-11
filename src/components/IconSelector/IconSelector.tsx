@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, IconButton } from "rsuite";
+import { IconButton } from "rsuite";
 import FacebookOfficialIcon from "@rsuite/icons/legacy/FacebookOfficial";
 
 interface ButtonOptions {

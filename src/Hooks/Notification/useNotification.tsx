@@ -1,11 +1,7 @@
 import React from "react";
 import {
-  Col,
   Divider,
-  FlexboxGrid,
-  Grid,
   Placeholder,
-  Row,
   Notification as RsuiteNotification,
   NotificationProps as RsuiteNotificationProps,
   useToaster,
