@@ -24,7 +24,7 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 2000,
     rollupOptions: {
-      external: ["react"],
+      external: ["React"],
     },
     target: "esnext",
     sourcemap: true,

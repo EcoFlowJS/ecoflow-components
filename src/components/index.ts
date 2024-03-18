@@ -1,4 +1,3 @@
-import Button from "./Button/Button.component";
 import IconSelector from "./IconSelector/IconSelector";
 import LoadingSquareCircle from "./Loading/LoadingSquareCircle.componet";
 import LoadingDotInfinity from "./Loading/LoadingDotInfinity.component";
@@ -14,7 +13,6 @@ import IconWrapper from "./IconWrapper/IconWrapper";
 import Uploader from "./Form/Uploader/Uploader";
 
 export {
-  Button,
   IconSelector,
   LoadingSquareCircle,
   LoadingDotInfinity,
