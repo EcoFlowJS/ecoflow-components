@@ -24,7 +24,12 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 2000,
     rollupOptions: {
-      external: ["React"],
+      external: ["react"],
+      output: {
+        globals: {
+          react: "React",
+        },
+      },
     },
     target: "esnext",
     sourcemap: true,
