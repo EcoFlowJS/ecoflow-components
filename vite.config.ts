@@ -22,7 +22,7 @@ export default defineConfig({
       name: "ecoflowLibrary",
       fileName: "index",
     },
-    chunkSizeWarningLimit: 1500,
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       external: ["react"],
     },
