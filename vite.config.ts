@@ -16,6 +16,15 @@ export default defineConfig({
       "@": resolve(__dirname, "src"),
     },
   },
+  css: {
+    preprocessorOptions: {
+      babel: {
+        loaders: [
+          { test: /\.tsx$/, loader: "babel", query: { compact: false } },
+        ],
+      },
+    },
+  },
   build: {
     lib: {
       entry: resolve(__dirname, "src", "index.tsx"),
