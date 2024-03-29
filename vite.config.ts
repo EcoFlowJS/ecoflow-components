@@ -5,12 +5,7 @@ import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      jsxRuntime: "classic",
-    }),
-    dts(),
-  ],
+  plugins: [react(), dts()],
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),
