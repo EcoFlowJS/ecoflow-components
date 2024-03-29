@@ -1,29 +1,19 @@
-import React from "react";
-import { IconButton } from "rsuite";
-import FacebookOfficialIcon from "@rsuite/icons/legacy/FacebookOfficial";
+import { IconButton, IconButtonProps } from "rsuite";
 
-interface ButtonOptions {
-  list?: IconButtonOptions[];
+interface IconSelectorProps {
+  list?: IconButtonProps[];
 }
 
-interface IconButtonOptions {
-  buttonText: string;
-}
-
-export default function IconSelector(Props: ButtonOptions): JSX.Element {
-  const { list } = Props;
+export default function IconSelector({ list }: IconSelectorProps) {
   return (
     <>
-      {list!.map((buttonOptions, key) => {
-        return (
-          <IconButton
-            icon={<FacebookOfficialIcon />}
-            color="blue"
-            appearance="primary"
-            circle
-          />
-        );
-      })}
+      {list ? (
+        list.map((props, index) => {
+          return <IconButton key={index} {...props} />;
+        })
+      ) : (
+        <></>
+      )}
     </>
   );
 }

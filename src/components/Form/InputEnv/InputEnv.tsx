@@ -1,4 +1,3 @@
-import React from "react";
 import { Checkbox, Input, InputGroup, Stack } from "rsuite";
 
 export default function InputEnv({

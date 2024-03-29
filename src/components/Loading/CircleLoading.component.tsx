@@ -1,4 +1,3 @@
-import React from "react";
 import "./CircleLoading.style.less";
 
 interface CircleLoadingProps {

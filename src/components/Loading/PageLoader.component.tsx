@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 import "./PageLoader.style.less";
 
 interface PageLoaderProps {

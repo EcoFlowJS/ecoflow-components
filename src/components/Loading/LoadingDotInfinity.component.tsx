@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 import "./LoadingDotInfinity.style.less";
 import styled from "styled-components";
 

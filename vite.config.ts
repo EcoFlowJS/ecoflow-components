@@ -36,6 +36,7 @@ export default defineConfig({
       output: {
         globals: {
           react: "React",
+          rsuite: "rsuite",
         },
       },
     },
