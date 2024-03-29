@@ -31,9 +31,8 @@ export default defineConfig({
       name: "ecoflowLibrary",
       fileName: "index",
     },
-    chunkSizeWarningLimit: 2000,
     rollupOptions: {
-      external: ["react"],
+      external: ["react", "rsuite"],
       output: {
         globals: {
           react: "React",
