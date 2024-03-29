@@ -1,5 +1,5 @@
 {
-  "name": "@eco-flow/components-lib",
+  "name": "@ecoflow/components-lib",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
@@ -45,5 +45,16 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-plugin-dts": "^3.7.0"
-  }
+  },
+  "description": "This is a custom components library for the EcoFlow.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EcoFlowJS/ecoflow-components.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EcoFlowJS/ecoflow-components/issues"
+  },
+  "homepage": "https://github.com/EcoFlowJS/ecoflow-components#readme"
 }

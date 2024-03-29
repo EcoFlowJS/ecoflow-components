@@ -1,6 +1,6 @@
 # EcoFlow Components Library
 
-## `@eco-flow/components-lib`
+## `@ecoflow/components-lib`
 
 This is a custom components library for the EcoFlow.
 
