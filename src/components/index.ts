@@ -1,5 +1,5 @@
 import IconSelector from "./IconSelector/IconSelector";
-import LoadingSquareCircle from "./Loading/LoadingSquareCircle.componet";
+import LoadingSquareCircle from "./Loading/LoadingSquareCircle.component";
 import LoadingDotInfinity from "./Loading/LoadingDotInfinity.component";
 import PageLoader from "./Loading/PageLoader.component";
 import CircleLoading from "./Loading/CircleLoading.component";
@@ -8,7 +8,6 @@ import FormGroup from "./Form/FromGroup/FromGroup";
 import InputEnv from "./Form/InputEnv/InputEnv";
 import InputPassword from "./Form/InputPassword/InputPassword";
 import InputPasswordEnv from "./Form/InputPasswordEnv/InputPasswordEnv";
-import { Form } from "rsuite";
 import IconWrapper from "./IconWrapper/IconWrapper";
 import Uploader from "./Form/Uploader/Uploader";
 
@@ -19,7 +18,6 @@ export {
   PageLoader,
   CircleLoading,
   AlertModal,
-  Form,
   FormGroup,
   InputEnv,
   InputPassword,

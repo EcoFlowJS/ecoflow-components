@@ -7,5 +7,5 @@ interface IconWrapperProps {
 
 export default function IconWrapper({ className, icon }: IconWrapperProps) {
   const Icon = icon;
-  return <Icon className={`${className} rs-icon`} />;
+  return <Icon className={`${className ? `${className} ` : ""}rs-icon`} />;
 }

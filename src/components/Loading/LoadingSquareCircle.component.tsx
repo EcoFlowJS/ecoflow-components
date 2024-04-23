@@ -7,17 +7,20 @@ interface LoadingSquareCircleProps {
   loaderColor?: string;
 }
 
-export default function (
-  { loaderColor, scale }: LoadingSquareCircleProps = { loaderColor: "#fff" }
-) {
-  const LoadingSquareCircle = styled.div`
-    &:after,
-    &:before {
-      box-shadow: 0 0 0 3px inset ${loaderColor};
-    }
-  `;
+const LoadingSquareCircle = styled.div<{ loadercolor?: string }>`
+  &:after,
+  &:before {
+    box-shadow: 0 0 0 3px inset ${(props) => props.loadercolor};
+  }
+`;
+
+export default function ({
+  loaderColor = "#FFF",
+  scale,
+}: LoadingSquareCircleProps) {
   return (
     <LoadingSquareCircle
+      loadercolor={loaderColor}
       className="loadingsquarecircle"
       style={{ scale: scale }}
     />
