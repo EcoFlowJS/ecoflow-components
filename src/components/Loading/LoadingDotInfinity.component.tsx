@@ -7,15 +7,17 @@ interface LoadingDotInfinityProps {
   loaderColor?: string;
 }
 
+const LoadingDotInfinity = styled.div<{ loaderColor?: string }>`
+  --c: ${(props) => props.loaderColor || "#FFFFFF"} 92%, transparent;
+`;
+
 export default function (
   { loaderColor, scale }: LoadingDotInfinityProps = { loaderColor: "#fff" }
 ) {
-  const LoadingDotInfinity = styled.div`
-    --c: ${loaderColor} 92%, transparent;
-  `;
   return (
     <LoadingDotInfinity
       className="loadingdotinfinity"
+      loaderColor={loaderColor}
       style={{ scale: scale }}
     />
   );
