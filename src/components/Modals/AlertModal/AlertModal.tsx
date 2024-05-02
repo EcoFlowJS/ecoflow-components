@@ -28,19 +28,6 @@ function AlertModal({
         <FlexboxGrid justify="space-between">
           <FlexboxGrid.Item>
             <Button
-              {...confirmButtonProps}
-              appearance={
-                confirmButtonProps?.appearance
-                  ? confirmButtonProps!.appearance
-                  : "primary"
-              }
-              style={{ minWidth: "80px" }}
-            >
-              {confirmButtonText}
-            </Button>
-          </FlexboxGrid.Item>
-          <FlexboxGrid.Item>
-            <Button
               {...CancelButtonProps}
               appearance={
                 CancelButtonProps?.appearance
@@ -50,6 +37,19 @@ function AlertModal({
               style={{ minWidth: "80px" }}
             >
               {CancelButtonText}
+            </Button>
+          </FlexboxGrid.Item>
+          <FlexboxGrid.Item>
+            <Button
+              {...confirmButtonProps}
+              appearance={
+                confirmButtonProps?.appearance
+                  ? confirmButtonProps!.appearance
+                  : "primary"
+              }
+              style={{ minWidth: "80px" }}
+            >
+              {confirmButtonText}
             </Button>
           </FlexboxGrid.Item>
         </FlexboxGrid>
