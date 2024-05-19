@@ -10,6 +10,7 @@ import InputPassword from "./Form/InputPassword/InputPassword";
 import InputPasswordEnv from "./Form/InputPasswordEnv/InputPasswordEnv";
 import IconWrapper from "./IconWrapper/IconWrapper";
 import Uploader from "./Form/Uploader/Uploader";
+import FolderSelector from "./Form/FolderSelector/FolderSelector.component";
 
 export {
   IconSelector,
@@ -24,4 +25,5 @@ export {
   InputPasswordEnv,
   IconWrapper,
   Uploader,
+  FolderSelector,
 };
