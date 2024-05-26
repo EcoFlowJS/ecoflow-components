@@ -1,6 +1,6 @@
 import { CSSProperties, ChangeEvent, useEffect, useState } from "react";
 import { Button, Input, InputGroup, InputProps, Modal, Tree } from "rsuite";
-import { FormControlBaseProps, ItemDataType } from "rsuite/esm/@types/common";
+import { FormControlBaseProps, ItemDataType } from "rsuite/esm/internals/types";
 import FolderFillIcon from "@rsuite/icons/FolderFill";
 import PageIcon from "@rsuite/icons/Page";
 import { ApiResponse } from "@ecoflow/types";
