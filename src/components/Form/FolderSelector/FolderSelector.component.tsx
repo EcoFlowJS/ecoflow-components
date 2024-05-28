@@ -22,6 +22,7 @@ interface FolderSelectorProps
   fileType?: "Directory" | "File";
   inside?: boolean;
   width?: CSSProperties["width"];
+  showIndentLine?: boolean;
   fetchDirectory?: (
     path?: string,
     type?: "Directory" | "File"
@@ -35,6 +36,7 @@ export default function FolderSelector({
   value,
   defaultValue,
   inside = false,
+  showIndentLine,
   onChange = () => {},
   disabled,
   fetchDirectory = async () => ({}),
@@ -54,7 +56,10 @@ export default function FolderSelector({
   }: ItemDataType): Promise<ItemDataType<string>[]> => {
     if (typeof value !== "string") return [];
     try {
-      const { success, payload } = await fetchDirectory(value as string);
+      const { success, payload } = await fetchDirectory(
+        value as string,
+        fileType
+      );
       if (success)
         return payload?.map(({ name, type }: any) => ({
           label: name,
@@ -125,6 +130,7 @@ export default function FolderSelector({
             data={basePath}
             value={value}
             getChildren={getChildren}
+            showIndentLine={showIndentLine}
             onSelect={(_, value) => (selectedValue = value as string)}
             renderTreeNode={(node) => {
               return (
