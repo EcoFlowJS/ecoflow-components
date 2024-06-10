@@ -14,6 +14,7 @@
   "sideEffects": false,
   "files": [
     "README.md",
+    "LICENSE",
     "dist"
   ],
   "scripts": {
@@ -24,7 +25,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ecoflow/types": "^0.0.25",
+    "@ecoflow/types": "^0.0.26",
     "jotai": "^2.6.1",
     "less": "^4.2.0",
     "react": "^18.2.0",
@@ -53,7 +54,7 @@
     "url": "git+https://github.com/EcoFlowJS/ecoflow-components.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/EcoFlowJS/ecoflow-components/issues"
   },
