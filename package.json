@@ -25,7 +25,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ecoflow/types": "^0.0.27",
+    "@ecoflow/types": "^0.0.28",
     "jotai": "^2.6.1",
     "less": "^4.2.0",
     "react": "^18.2.0",
