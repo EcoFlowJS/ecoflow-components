@@ -91,7 +91,7 @@ export default function FolderSelector({
         },
         ({ error, payload }: ApiResponse) => {
           setBasePathLoading(false);
-          if (error) console.log(payload);
+          if (error) console.error(payload);
           setBasePath([]);
         }
       );
